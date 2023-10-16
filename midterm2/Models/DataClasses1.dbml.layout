@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="6d87a606-38fc-414a-a293-dd7bbaf346c3" absoluteBounds="3.5, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClasses1DataContext/Buy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="419f9181-2f31-445a-bcfb-d5a1183f637a" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7307c33-edee-4cb4-b01a-aa3e020edc7f" absoluteBounds="6.25, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/buy_detail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ae95d70-fad9-40e7-af1b-3f958fc1c724" absoluteBounds="6.265, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bfbd5bf9-b59c-4d11-bf3a-5f0c2e47faee" absoluteBounds="0.75, 4, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/DataClasses1DataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58432107-d16c-4055-bd41-b20f32db8327" absoluteBounds="0.765, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a0593437-53e8-40dd-a44c-8a991accab68" absoluteBounds="0.75, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/Movie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4fe9111f-6c8a-4642-abb5-b03e3276f178" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40d9905b-1068-45a1-b337-6bb737f4b7bd" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClasses1DataContext/Showtime" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c3c307d-23cc-4315-8a1d-26b0a0504c0b" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.94314697265625); (7.25 : 4.94314697265625); (7.25 : 2.6362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Buy/Buy_buy_detail" />
+      <nodes>
+        <classShapeMoniker Id="6d87a606-38fc-414a-a293-dd7bbaf346c3" />
+        <classShapeMoniker Id="f7307c33-edee-4cb4-b01a-aa3e020edc7f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.94314697265625); (3.5 : 4.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Customer/Customer_Buy" />
+      <nodes>
+        <classShapeMoniker Id="bfbd5bf9-b59c-4d11-bf3a-5f0c2e47faee" />
+        <classShapeMoniker Id="6d87a606-38fc-414a-a293-dd7bbaf346c3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.94314697265625); (6.25 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Showtime/Showtime_buy_detail" />
+      <nodes>
+        <classShapeMoniker Id="40d9905b-1068-45a1-b337-6bb737f4b7bd" />
+        <classShapeMoniker Id="f7307c33-edee-4cb4-b01a-aa3e020edc7f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.5 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Movie/Movie_Showtime" />
+      <nodes>
+        <classShapeMoniker Id="a0593437-53e8-40dd-a44c-8a991accab68" />
+        <classShapeMoniker Id="40d9905b-1068-45a1-b337-6bb737f4b7bd" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

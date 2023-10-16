@@ -1,0 +1,70 @@
+﻿@model IEnumerable<midterm2.Models.Showtime>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.show_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.show_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.show_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.show_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.show_quantity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.show_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.show_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.show_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.show_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.show_quantity)
+        </td>
+        @if (item.show_quantity == 0)
+        {
+            <td>
+                sold out
+            </td>
+        }else 
+        {
+        <td>
+            @Html.ActionLink("Buy", "Edit", new { id = item.show_id }, new { @class = "btn btn-success btn-sm" })
+        </td>
+        }
+    </tr>
+}
+
+</table>

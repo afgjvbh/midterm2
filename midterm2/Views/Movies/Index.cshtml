@@ -1,0 +1,55 @@
+﻿@model IEnumerable<midterm2.Models.Movie>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="panel panel-default main">
+                    <div class="panel panel-heading">
+                        <div class="row sub-title">
+                            <div class="col-10">
+                                <p style="font-size: 20px; font-weight: 500;">
+                                    <strong>Title: </strong>
+                                    <i style="font-family: ahkio; color:darkgoldenrod; ">@item.movie_name</i>
+                                </p>
+                            </div>
+                            <div class="col-2">
+                                @Html.ActionLink("Edit", "Edit", new { id = item.movie_id }, new { @class = "no-underline" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>Director: </strong>@item.director</p>
+                        <p><img style="width: 100px; height: 100px" src="@item.poster" alt="hinh thumnail" /></p>
+                        <p><strong>Release date: </strong>@item.release_date</p>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="pull-right">
+                            @if (item.release_date > DateTime.Now)
+                            {
+                                @Html.ActionLink("Coming Soon ...", "Detail", new { id = item.movie_id },
+new { @class = "btn btn-warning btn-sm " })
+                            }
+                            else
+                            {
+                                @Html.ActionLink("Now Showing...", "Detail", new { id = item.movie_id },
+        new { @class = "btn btn-danger btn-sm " })
+                            }
+
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <br />
+            </div>
+        }
+
+    </div>
+</section>
