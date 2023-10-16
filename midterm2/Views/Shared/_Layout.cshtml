@@ -20,7 +20,8 @@
                     <li>@Html.ActionLink("Cenima", "Index", "Movies", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Now Showing", "Index", "Show movies", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Register", "Register", "User", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Login", "Login", "User", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-link">@Html.Partial("~/Views/Cart/CartPartial.cshtml")</li>
 
                 </ul>
             </div>
